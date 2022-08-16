@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: "Red Hat Display";
+    /* Primary Colors */
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    /* Neutral */
+    --veryPaleBlue: hsl(225, 100%, 98%);
+    --desaturatedBlue: hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--paleBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    max-width: 90%;
+    background-color: var(--veryPaleBlue);
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+main > * {
+    margin: 0.5em 2em;
+}
+
+main img {
+    width: 100%;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    margin-bottom: 1.5em;
+    margin-top: 0;
+}
+
+main h1 {
+    font-size: 1.4em;
+    color: var(--darkBlue);
+    font-weight: 900;
+}
+
+main p {
+    color: var(--desaturatedBlue);
+}
+
+.plan {
+    background-color: hsl(225, 100%, 96%);
+    display: flex;
+    align-items: center;
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
+
+.plan img {
+    margin: 1em;
+}
+
+.plan div > * {
+    font-size: 1em;
+    margin-right: 2em;
+}
+
+.plan a {
+    color: var(--brightBlue);
+    margin-right: 2em;
+    font-size: 0.8em;
+    font-weight: 700;
+}
+
+.plan a:hover {
+    text-decoration: none;
+    color: hsl(245, 75%, 65%);
+}
+
+.button {
+    background-color: var(--brightBlue);
+    width: 80%;
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    color: var(--paleBlue);
+    list-style: none;
+    text-decoration: none;
+    font-weight: 700;
+    margin-bottom: 1.5em;
+    box-shadow: 0 0.2em 1em var(--brightBlue);
+}
+
+.button:hover {
+    background-color: hsl(245, 75%, 65%);;
+}
+
+#cancel-order {
+    color: var(--desaturatedBlue);
+    text-decoration: none;
+    font-weight: 700;
+    margin-bottom: 2em;
+}
+
+#cancel-order:hover {
+    color: var(--darkBlue);
+}
+
+
+footer {
+    margin-top: 2em;
+    font-size: 1.25em; text-align: center;
+}
+
+footer a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* iPads, Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    main {
+        width: 70%;
+    }
+}
+
+/* Laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    main {
+        width: 50%;
+    }
+}
+
+/* Desktops, large screens */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    main {
+        width: 40%;
+    }
+}
+
+/* Desktop and Large */
+@media (min-width: 1201px) {
+    main {
+        width: 17.5%;
+    }
+}
