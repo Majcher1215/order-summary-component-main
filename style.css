@@ -19,6 +19,10 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: var(--paleBlue);
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,7 +30,9 @@ body {
 }
 
 main {
-    max-width: 90%;
+    width: 90%;
+    min-width: 340px;
+    max-width: 500px;
     background-color: var(--veryPaleBlue);
     border-radius: 1em;
     display: flex;
@@ -59,26 +65,36 @@ main p {
 
 .plan {
     background-color: hsl(225, 100%, 96%);
+    width: 80%;
+    height: 5em;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border-radius: 1em;
     margin-bottom: 1em;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
 }
 
 .plan img {
+    min-width: 3em;
+    max-width: 3em;
     margin: 1em;
 }
 
 .plan div > * {
     font-size: 1em;
-    margin-right: 2em;
 }
 
 .plan a {
     color: var(--brightBlue);
-    margin-right: 2em;
     font-size: 0.8em;
     font-weight: 700;
+    margin-right: 2em;
 }
 
 .plan a:hover {
@@ -127,19 +143,20 @@ footer a {
 /* iPads, Tablets */
 @media (min-width: 481px) and (max-width: 768px) {
     main {
-        width: 70%;
+        width: 75%;
     }
 }
 
 /* Laptops */
 @media (min-width: 769px) and (max-width: 1024px) {
     main {
-        width: 50%;
+        width: 60%;
     }
 }
 
 /* Desktops, large screens */
 @media (min-width: 1025px) and (max-width: 1200px) {
+
     main {
         width: 40%;
     }
@@ -147,7 +164,15 @@ footer a {
 
 /* Desktop and Large */
 @media (min-width: 1201px) {
+
+    body {
+        background-image: url(images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: contain;
+    }
+
     main {
-        width: 17.5%;
+        width: 25%;
     }
 }
